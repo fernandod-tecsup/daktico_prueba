@@ -1,0 +1,195 @@
+@mixin headerbox {
+    margin:{
+        top: 10px;
+        right: 10px;
+        bottom: 10px;
+        left: 40px;
+    }
+    background-color:#095aac;
+    text-align: center;
+    padding:{
+        right: 40px;
+        left: 40px;
+    }
+    text:{
+        align:center;
+        
+    }
+    font:{
+        size: 25px;
+        weight: bold;
+    }
+    border-radius: 5px 5px 5px 5px;
+    border-width: 3px;
+    border-style: solid;
+    border-image: 
+        linear-gradient(
+        right, 
+        #28daf2, 
+        #095aac
+        ) 1 0%;
+}
+body{
+    background-image: url(img/background.png);
+    margin-top: 40px;
+    width: 100%;
+}
+#cabecera{
+    width: 100%;
+}
+#content_name{
+    margin-top: 50px;
+    color: white;
+    #name_user{
+        margin: 10px;
+        padding:{
+            right: 40px;
+            left: 40px;
+            top: 5px;
+            bottom: 5px;
+        }
+        background-color:#095aac;
+        text:{
+            align:center;
+            
+        }
+        font:{
+            size: 25px;
+            weight: bold;
+        }
+        border-radius: 5px 5px 5px 5px;
+        border-width: 3px;
+        border-style: solid;
+        border-image: 
+            linear-gradient(
+            right, 
+            #28daf2, 
+            #095aac
+            ) 1 0%;
+    }
+    #img_moneda{
+        position: absolute;
+        width: 70px;
+        height: 70px;
+    }
+    #puntos_user{
+        @include headerbox();
+    }
+    #img_insignea{
+        position: absolute;
+        margin-top: -20px;
+        width: 60px;
+        height: 90px;
+    }
+    #medallas_user{
+        @include headerbox();
+    }
+    #img_copa{
+        position: absolute;
+        width: 70px;
+        height: 80px;
+    }
+    #trofeos_user{
+        @include headerbox();
+    }
+    #btn_config{
+        margin: 10px;
+        img{
+            width: 50px;
+            height: 50px;
+        }
+    }
+    #btn_home{
+        
+        margin:{
+            top: 10px;
+            bottom: 10px;
+            right: 10px;
+            left: 200px;
+        }
+        img{
+            width: 50px;
+            height: 50px;
+        }
+    }
+    #img_start{
+        position:absolute;
+        margin-top: 120px;
+        width: 250px;
+    }
+    #progreso{
+        width: 100%;
+        margin-top: 280px;
+        margin-left: 250px;
+    }
+    .meter {
+        box-sizing: content-box;
+        height: 20px; 
+        position: relative;
+        margin: 60px 0 20px 0; 
+        background: #555;
+        border-radius: 25px;
+        padding: 10px;
+        box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+      }
+      .meter > span {
+        display: block;
+        height: 100%;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        background-color: rgb(43, 194, 83);
+        background-image: linear-gradient(
+          center bottom,
+          rgb(43, 194, 83) 37%,
+          rgb(84, 240, 84) 69%
+        );
+        box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3),
+          inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+        position: relative;
+        overflow: hidden;
+      }
+      .meter > span:after,
+      .animate > span > span {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-image: linear-gradient(
+          -45deg,
+          rgba(255, 255, 255, 0.2) 25%,
+          transparent 25%,
+          transparent 50%,
+          rgba(255, 255, 255, 0.2) 50%,
+          rgba(255, 255, 255, 0.2) 75%,
+          transparent 75%,
+          transparent
+        );
+        z-index: 1;
+        background-size: 50px 50px;
+        animation: move 2s linear infinite;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        overflow: hidden;
+      }
+      
+      .animate > span:after {
+        display: none;
+      }
+      @keyframes move {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: 50px 50px;
+        }
+      }
+      .orange > span {
+        background-image: linear-gradient(#f1a165, #f36d0a);
+      } 
+}
